@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>FIXPRO Appliances | Expert Appliance Repairs in London</title>
+    <meta name="description" content="Fast, reliable appliance repairs across London. Washing machines, ovens, fridges, dishwashers & more. Fixed properly, first time. Call +44 7482 646491.">
+    <meta name="keywords" content="appliance repair London, washing machine repair London, oven repair London, fridge repair London, dishwasher repair London, hob repair London">
+    <meta name="author" content="FIXPRO Appliances">
+    <link rel="canonical" href="https://www.fixproappliances.co.uk/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="FIXPRO Appliances | Expert Appliance Repairs in London">
+    <meta property="og:description" content="Fast, reliable appliance repairs across London. Fixed properly, first time.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.fixproappliances.co.uk/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1626806819282-2c1dc01a5e0c?w=1200">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-blue: #0b1c3f;
+            --primary-blue-dark: #071228;
+            --accent-orange: #ff7a00;
+            --accent-orange-dark: #e06a00;
+            --light-bg: #f4f7f6;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background-color: #fff;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            background-color: var(--primary-blue);
+            border-bottom: 3px solid var(--accent-orange);
+            padding: 0.75rem 0;
+        }
+
+        .navbar-brand .brand-fix {
+            color: #ffffff;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .navbar-brand .brand-pro {
+            color: var(--accent-orange);
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .brand-subtitle {
+            font-size: 0.72rem;
+            color: #aab;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .nav-link {
+            position: relative;
+            font-weight: 500;
+            transition: color 0.25s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 2px;
+            width: 0;
+            height: 2px;
+            background: var(--accent-orange);
+            transition: all 0.25s ease;
+            transform: translateX(-50%);
+        }
+        .nav-link:hover::after { width: 60%; }
+        .nav-link:hover { color: var(--accent-orange) !important; }
+
+        /* ===== BUTTONS ===== */
+        .btn-custom-orange {
+            background-color: var(--accent-orange);
+            color: white;
+            font-weight: 600;
+            padding: 12px 30px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            border: none;
+        }
+        .btn-custom-orange:hover {
+            background-color: var(--accent-orange-dark);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 122, 0, 0.45);
+        }
+        .btn-custom-orange:focus {
+            box-shadow: 0 0 0 4px rgba(255, 122, 0, 0.35);
+        }
+
+        /* ===== HERO (pure CSS — no canvas, no WebGL) ===== */
+        .hero-section {
+            position: relative;
+            overflow: hidden;
+            color: #fff;
+            padding: 110px 0 90px;
+            background: linear-gradient(135deg, #0b1c3f 0%, #162a56 55%, #071228 100%);
+        }
+
+        /* Soft animated orange/blue glows */
+        .hero-glow {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(90px);
+            pointer-events: none;
+        }
+        .hero-glow-1 {
+            width: 440px; height: 440px;
+            background: rgba(255, 122, 0, 0.32);
+            top: -140px; left: -100px;
+            animation: glowFloat 13s ease-in-out infinite;
+        }
+        .hero-glow-2 {
+            width: 380px; height: 380px;
+            background: rgba(40, 85, 180, 0.45);
+            bottom: -160px; right: -80px;
+            animation: glowFloat 17s ease-in-out infinite reverse;
+        }
+        @keyframes glowFloat {
+            0%, 100% { transform: translate(0, 0); }
+            50%      { transform: translate(35px, -30px); }
+        }
+
+        .hero-section .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Eyebrow badge */
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 122, 0, 0.14);
+            border: 1px solid rgba(255, 122, 0, 0.45);
+            color: #ffb066;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            margin-bottom: 22px;
+        }
+
+        .hero-title {
+            font-weight: 800;
+            font-size: 3.2rem;
+            line-height: 1.15;
+            text-shadow: 0 2px 14px rgba(0, 0, 0, 0.3);
+        }
+        .hero-title span { color: var(--accent-orange); }
+
+        .hero-lead {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.15rem;
+            max-width: 560px;
+        }
+
+        /* Trust chips under the CTAs */
+        .hero-trust {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 26px;
+            margin-top: 32px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .hero-trust i {
+            color: var(--accent-orange);
+            margin-right: 7px;
+        }
+
+        /* Glass card */
+        .hero-card {
+            position: relative;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+        }
+        .hero-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.75rem;
+        }
+        .hero-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .hero-card li {
+            display: flex;
+            gap: 14px;
+            padding: 13px 0;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.95rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .hero-card li:last-child { border-bottom: none; }
+        .hero-card li i {
+            color: var(--accent-orange);
+            font-size: 1.15rem;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        /* Floating rating badge on the card */
+        .hero-rating-badge {
+            position: absolute;
+            top: -20px;
+            right: 22px;
+            background: var(--accent-orange);
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            white-space: nowrap;
+            box-shadow: 0 10px 25px rgba(255, 122, 0, 0.45);
+            animation: floaty 4.5s ease-in-out infinite;
+        }
+        .hero-rating-badge span {
+            font-weight: 500;
+            font-size: 0.78rem;
+            opacity: 0.92;
+            margin-left: 4px;
+        }
+        @keyframes floaty {
+            0%, 100% { transform: translateY(0); }
+            50%      { transform: translateY(-9px); }
+        }
+
+        /* ===== STATS STRIP ===== */
+        .stats-strip {
+            background: var(--accent-orange);
+            padding: 28px 0;
+            color: white;
+            position: relative;
+            z-index: 3;
+        }
+        .stat-item {
+            text-align: center;
+            padding: 8px 12px;
+        }
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+        .stat-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.9;
+            margin-top: 6px;
+        }
+        @media (min-width: 768px) {
+            .stat-item + .stat-item {
+                border-left: 1px solid rgba(255, 255, 255, 0.3);
+            }
+        }
+
+        /* ===== SECTION TITLES ===== */
+        .section-title {
+            font-weight: 700;
+            color: var(--primary-blue);
+            position: relative;
+            margin-bottom: 50px;
+            font-size: 2.1rem;
+        }
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-orange);
+            position: absolute;
+            bottom: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        .section-title.text-start::after {
+            left: 0;
+            transform: none;
+        }
+
+        /* ===== SERVICE CARDS ===== */
+        .service-card {
+            border: none;
+            border-radius: 16px;
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+            background: #fff;
+            box-shadow: 0 4px 18px rgba(11, 28, 63, 0.06);
+            overflow: hidden;
+            position: relative;
+            height: 100%;
+        }
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--accent-orange);
+            transition: width 0.3s ease;
+            z-index: 1;
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 45px rgba(11, 28, 63, 0.15);
+        }
+        .service-card:hover::before { width: 8px; }
+
+        .service-img-wrap {
+            height: 190px;
+            overflow: hidden;
+            position: relative;
+        }
+        .service-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .service-card:hover .service-img-wrap img {
+            transform: scale(1.1);
+        }
+        .service-img-wrap::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 40%, rgba(11, 28, 63, 0.35) 100%);
+        }
+
+        .service-icon-badge {
+            position: absolute;
+            bottom: -22px;
+            right: 20px;
+            width: 52px;
+            height: 52px;
+            background: var(--accent-orange);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            box-shadow: 0 6px 18px rgba(255, 122, 0, 0.4);
+            z-index: 2;
+            transition: transform 0.35s ease;
+        }
+        .service-card:hover .service-icon-badge {
+            transform: scale(1.1) rotate(-10deg);
+        }
+
+        .service-card-body {
+            padding: 1.75rem 1.5rem 1.5rem;
+        }
+        .service-card-body h4 {
+            color: var(--primary-blue);
+            font-weight: 700;
+            margin-bottom: 0.6rem;
+        }
+
+        /* ===== ABOUT ===== */
+        .about-section {
+            background: linear-gradient(180deg, #f4f7f6 0%, #eef2f1 100%);
+        }
+        .about-img {
+            border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(11, 28, 63, 0.18);
+            width: 100%;
+            height: auto;
+        }
+        .about-img-wrap {
+            position: relative;
+        }
+        .about-img-wrap::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: -20px;
+            width: 80%;
+            height: 80%;
+            border: 3px solid var(--accent-orange);
+            border-radius: 16px;
+            z-index: -1;
+        }
+        .about-badge {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary-blue);
+            color: white;
+            padding: 14px 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .about-badge i {
+            color: var(--accent-orange);
+            font-size: 1.6rem;
+        }
+
+        .trust-list li {
+            display: flex;
+            align-items: center;
+            padding: 8px 0;
+            font-weight: 500;
+            color: #444;
+        }
+        .trust-list i {
+            color: var(--accent-orange);
+            margin-right: 12px;
+            font-size: 1.1rem;
+        }
+
+        /* ===== REVIEWS ===== */
+        .review-summary {
+            background: var(--primary-blue);
+            color: white;
+            padding: 28px;
+            border-radius: 16px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .review-summary-score {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+        .review-summary-stars {
+            color: var(--accent-orange);
+            font-size: 1.4rem;
+            margin: 8px 0;
+        }
+
+        .review-card {
+            background: #fff;
+            border-radius: 16px;
+            border: 1px solid #eef0f0;
+            padding: 1.75rem;
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        .review-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 40px rgba(11, 28, 63, 0.1);
+        }
+        .review-card .quote-icon {
+            color: #f0e0d0;
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .review-stars { color: var(--accent-orange); }
+        .review-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: white;
+            font-size: 1.05rem;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+
+        /* ===== INFO BANNER ===== */
+        .info-banner {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #162a56 100%);
+            color: white;
+            border-top: 4px solid var(--accent-orange);
+            position: relative;
+            overflow: hidden;
+        }
+        .info-banner::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, rgba(255, 122, 0, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .info-banner .container { position: relative; z-index: 1; }
+
+        /* ===== CONTACT ===== */
+        .contact-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 6px 22px rgba(11, 28, 63, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #f0f0f0;
+        }
+        .contact-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(11, 28, 63, 0.12);
+        }
+        .contact-icon-circle {
+            width: 72px;
+            height: 72px;
+            background: rgba(255, 122, 0, 0.1);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-orange);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        /* ===== WHATSAPP FLOAT ===== */
+        .whatsapp-float {
+            position: fixed;
+            width: 62px;
+            height: 62px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            animation: pulse 2.2s infinite;
+        }
+        .whatsapp-float:hover {
+            background-color: #20ba5a;
+            color: #fff;
+            transform: scale(1.1);
+        }
+        @keyframes pulse {
+            0%   { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+            70%  { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: var(--primary-blue-dark);
+            color: #aab;
+            padding: 30px 0;
+            font-size: 0.9rem;
+        }
+        footer strong { color: white; }
+
+        /* ===== SCROLL REVEAL ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 991px) {
+            .hero-title { font-size: 2.4rem; }
+            .hero-section { padding: 80px 0 70px; }
+            .section-title { font-size: 1.7rem; }
+            .hero-lead { font-size: 1.05rem; }
+            .hero-card { margin-top: 2.5rem; }
+        }
+        @media (max-width: 767px) {
+            .hero-title { font-size: 2rem; }
+            .hero-glow-1, .hero-glow-2 { opacity: 0.6; }
+            .hero-trust { gap: 8px 18px; font-size: 0.85rem; }
+            .whatsapp-float { width: 54px; height: 54px; font-size: 26px; bottom: 20px; right: 20px; }
+        }
+    </style>
+
+    <!-- JSON-LD: LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+      "name": "FIXPRO Appliances",
+      "url": "https://www.fixproappliances.co.uk/",
+      "telephone": "+44 7482 646491",
+      "priceRange": "££",
+      "image": "https://images.unsplash.com/photo-1626806819282-2c1dc01a5e0c?w=1200",
+      "description": "Professional appliance repair in London. Same-day service for washing machines, ovens, fridges, dishwashers, dryers and hobs. Fixed properly, first time.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "London",
+        "addressCountry": "GB"
+      },
+      "areaServed": [
+        {"@type": "Place", "name": "London"},
+        {"@type": "Place", "name": "Greater London"}
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "08:00", "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00", "closes": "15:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/fixproappliances",
+        "https://www.instagram.com/fixproappliances"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "ratingCount": "87"
+      }
+    }
+    </script>
+
+    <!-- JSON-LD: Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Appliance Repair",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "FIXPRO Appliances",
+        "telephone": "+44 7482 646491",
+        "url": "https://www.fixproappliances.co.uk/"
+      },
+      "areaServed": {"@type": "Place", "name": "London"},
+      "description": "Expert repair services for washing machines, ovens, hobs, fridges, freezers, dishwashers and dryers across London."
+    }
+    </script>
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex flex-column" href="#home">
+                <div>
+                    <span class="brand-fix fs-4">FIXPRO</span><span class="brand-pro fs-4">APPLIANCES</span>
+                </div>
+                <span class="brand-subtitle">Fixed Properly, First Time</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link text-white mx-2" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white mx-2" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link text-white mx-2" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-white mx-2" href="#reviews">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link text-white mx-2" href="#contact">Contact</a></li>
+                    <li class="nav-item ms-3">
+                        <a href="https://wa.me/447482646491?text=Hello,%20I%20need%20help%20with%20an%20appliance%20repair."
+                           target="_blank" class="btn btn-custom-orange btn-sm">
+                            <i class="fab fa-whatsapp me-1"></i> WhatsApp Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <header id="home" class="hero-section">
+           <!-- <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-2"></div> -->
+
+        <div class="container">
+            <div class="row align-items-center g-4 g-lg-5">
+
+                <!-- Left: headline + CTAs -->
+                <div class="col-lg-7">
+                    <span class="hero-eyebrow">
+                        <i class="fas fa-bolt"></i> Appliance Repair in London
+                    </span>
+
+                    <h1 class="hero-title">Professional Appliance Repairs in <span>London</span></h1>
+
+                    <p class="lead my-4 hero-lead">
+                        Fast, reliable and guaranteed fixes for your home appliances.
+                        Don't replace it — repair it with the experts.
+                    </p>
+
+                    <div class="d-flex flex-column flex-sm-row gap-3">
+                        <a href="https://wa.me/447482646491?text=Hello,%20I%20would%20like%20to%20request%20a%20repair%20quote."
+                           target="_blank" class="btn btn-custom-orange btn-lg">
+                            <i class="fab fa-whatsapp me-2"></i> Book via WhatsApp
+                        </a>
+                        <a href="tel:+447482646491" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-phone-alt me-2"></i> +44 7482 646491
+                        </a>
+                    </div>
+
+                    <div class="hero-trust">
+                        <span><i class="fas fa-check-circle"></i> Same-Day Response</span>
+                        <span><i class="fas fa-check-circle"></i> Honest, Upfront Pricing</span>
+                        <span><i class="fas fa-check-circle"></i> Guaranteed Repairs</span>
+                    </div>
+                </div>
+
+                <!-- Right: glass card -->
+                <div class="col-lg-5">
+                    <div class="hero-card">
+                        <div class="hero-rating-badge">
+                            <i class="fas fa-star me-1"></i>4.9 <span>· 87 reviews</span>
+                        </div>
+
+                        <h3><i class="fas fa-shield-alt text-warning me-2"></i> Why London trusts FIXPRO</h3>
+
+                        <ul>
+                            <li>
+                                <i class="fas fa-truck-fast"></i>
+                                <span>Fast response across London &amp; surrounding areas</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-tags"></i>
+                                <span>Transparent, upfront pricing — no hidden surprises</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-wrench"></i>
+                                <span>Fixed properly, first time — every single job</span>
+                            </li>
+                        </ul>
+
+                        <hr class="border-light opacity-25 my-3">
+
+                        <p class="mb-0 text-warning fw-semibold">
+                            <i class="fas fa-map-marker-alt me-2"></i> London &amp; Surrounding Areas
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== STATS STRIP ===== -->
+    <section class="stats-strip">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Repairs Completed</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <div class="stat-number">4.9★</div>
+                        <div class="stat-label">Customer Rating</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <div class="stat-number">Same Day</div>
+                        <div class="stat-label">Response Available</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section id="services" class="py-5 bg-white">
+        <div class="container py-4">
+            <div class="text-center reveal">
+                <h2 class="section-title">Our Repair Services</h2>
+                <p class="text-muted mb-5">We handle all major household appliances with specialised expertise.</p>
+            </div>
+            <div class="row g-4">
+
+                <!-- Washing Machine -->
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="service-card">
+                        <div class="service-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1626806819282-2c1dc01a5e0c?w=600&q=80&auto=format"
+                                 alt="Washing machine repair in London" loading="lazy">
+                            <div class="service-icon-badge"><i class="fas fa-tshirt"></i></div>
+                        </div>
+                        <div class="service-card-body">
+                            <h4>Washing Machine</h4>
+                            <p class="text-muted mb-0">Fixing draining problems, spinning issues, leaks, and electrical faults promptly.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oven -->
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="service-card">
+                        <div class="service-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?w=600&q=80&auto=format"
+                                 alt="Oven and cooker repair in London" loading="lazy">
+                            <div class="service-icon-badge"><i class="fas fa-fire-burner"></i></div>
+                        </div>
+                        <div class="service-card-body">
+                            <h4>Oven &amp; Cooker</h4>
+                            <p class="text-muted mb-0">Expert repairs for electric cookers, built-in ovens, heating elements, and thermostats.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hob -->
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="service-card">
+                        <div class="service-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80&auto=format"
+                                 alt="Hob and grill repair in London" loading="lazy">
+                            <div class="service-icon-badge"><i class="fas fa-fire-flame-curved"></i></div>
+                        </div>
+                        <div class="service-card-body">
+                            <h4>Hob &amp; Grill</h4>
+                            <p class="text-muted mb-0">Quick diagnostics and repair for hob ignitions, burners, and cooking surfaces.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fridge -->
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="service-card">
+                        <div class="service-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=600&q=80&auto=format"
+                                 alt="Fridge and freezer repair in London" loading="lazy">
+                            <div class="service-icon-badge"><i class="fas fa-snowflake"></i></div>
+                        </div>
+                        <div class="service-card-body">
+                            <h4>Fridge &amp; Freezer</h4>
+                            <p class="text-muted mb-0">Ensuring optimal cooling performance, fixing compressor issues and temperature controls.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dishwasher -->
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="service-card">
+                        <div class="service-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&q=80&auto=format"
+                                 alt="Dishwasher repair in London" loading="lazy">
+                            <div class="service-icon-badge"><i class="fas fa-utensils"></i></div>
+                        </div>
+                        <div class="service-card-body">
+                            <h4>Dishwasher</h4>
+                            <p class="text-muted mb-0">Resolving water intake issues, poor cleaning results, and drainage failures.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dryer -->
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="service-card">
+                        <div class="service-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?w=600&q=80&auto=format"
+                                 alt="Tumble dryer and cooker hood repair in London" loading="lazy">
+                            <div class="service-icon-badge"><i class="fas fa-wind"></i></div>
+                        </div>
+                        <div class="service-card-body">
+                            <h4>Dryer &amp; Cooker Hoods</h4>
+                            <p class="text-muted mb-0">Comprehensive maintenance and parts replacement for all tumble dryers and extractors.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="py-5 about-section">
+        <div class="container py-4">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 reveal">
+                    <div class="about-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&q=80&auto=format"
+                             alt="FIXPRO Appliances technician repairing a home appliance in London"
+                             class="about-img" loading="lazy">
+                        <div class="about-badge">
+                            <i class="fas fa-medal"></i>
+                            <div>
+                                <div class="fw-bold" style="font-size:1.05rem;">Fixed Properly</div>
+                                <div class="small" style="opacity:0.8;">First Time, Every Time</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 reveal">
+                    <h2 class="section-title text-start" style="margin-bottom:30px;">About FIXPRO Appliances</h2>
+                    <p class=" mb-3"><strong>Fixed Properly, First Time.</strong> That is not just a tagline—it is the standard we hold ourselves to on every single job.</p>
+                    <p class=" mb-3">FIXPRO Appliances is a London-based repair specialist dedicated to helping households avoid the cost and hassle of replacing appliances unnecessarily. From washing machines that will not drain to ovens that will not heat, we diagnose the fault quickly and carry out the repair with genuine care and precision.</p>
+                    <p class=" mb-4">We serve homeowners, landlords and letting agents across London and the surrounding areas. Our approach is simple: transparent pricing, honest advice and a repair that lasts.</p>
+                    <ul class="list-unstyled trust-list">
+                        <li><i class="fas fa-check-circle"></i> Fast response across London</li>
+                        <li><i class="fas fa-check-circle"></i> Honest, upfront pricing</li>
+                        <li><i class="fas fa-check-circle"></i> Specialist repair—not replacement-first</li>
+                        <li><i class="fas fa-check-circle"></i> Friendly, local service you can rely on</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== REVIEWS ===== -->
+    <section id="reviews" class="py-5 bg-white">
+        <div class="container py-4">
+            <div class="text-center reveal">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <p class="text-muted mb-5">Real feedback from homeowners across London.</p>
+            </div>
+
+            <div class="row justify-content-center mb-4 reveal">
+                <div class="col-md-6 col-lg-4">
+                    <div class="review-summary">
+                        <div class="review-summary-score">4.9</div>
+                        <div class="review-summary-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="mb-0 text-light small">Based on 87 verified reviews</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-4 reveal">
+                    <div class="review-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <div class="review-stars mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-muted mb-4">"My washing machine stopped draining on a Sunday. FIXPRO responded quickly, diagnosed the fault and had it fixed the same day. Honest pricing and a really friendly service."</p>
+                        <div class="d-flex align-items-center">
+                            <div class="review-avatar" style="background:#0b1c3f;">SM</div>
+                            <div>
+                                <strong class="d-block" style="color:var(--primary-blue);">Sarah M.</strong>
+                                <small class="text-muted">Islington</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 reveal">
+                    <div class="review-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <div class="review-stars mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-muted mb-4">"Our built-in oven had completely stopped heating. The technician was punctual, tidy and explained exactly what needed replacing. Much cheaper than buying a new oven."</p>
+                        <div class="d-flex align-items-center">
+                            <div class="review-avatar" style="background:#ff7a00;">JT</div>
+                            <div>
+                                <strong class="d-block" style="color:var(--primary-blue);">James T.</strong>
+                                <small class="text-muted">Wandsworth</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 reveal">
+                    <div class="review-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <div class="review-stars mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-muted mb-4">"I manage several rental properties and FIXPRO has become my go-to for appliance repairs. Reliable, communicative and they always fix it properly the first time."</p>
+                        <div class="d-flex align-items-center">
+                            <div class="review-avatar" style="background:#162a56;">PK</div>
+                            <div>
+                                <strong class="d-block" style="color:var(--primary-blue);">Priya K.</strong>
+                                <small class="text-muted">Lettings Agent, Hackney</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== INFO BANNER ===== -->
+    <section class="info-banner py-5 text-center">
+        <div class="container">
+            <h2 class="fw-bold mb-3">Need Fast Appliance Repair in London?</h2>
+            <p class="lead mb-4">Get in touch with us right now via WhatsApp for a quick response and reliable solution.</p>
+            <a href="https://wa.me/447482646491?text=Hi,%20I%20need%20an%20appliance%20repaired."
+               target="_blank" class="btn btn-custom-orange btn-lg shadow">
+                <i class="fab fa-whatsapp me-2"></i> Chat on WhatsApp (+44 7482 646491)
+            </a>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="text-center reveal">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="text-muted mb-5">We are ready to assist you across London and surrounding areas.</p>
+            </div>
+            <div class="row justify-content-center g-4">
+                <div class="col-md-5 reveal">
+                    <div class="p-4 contact-card h-100 text-center">
+                        <div class="contact-icon-circle"><i class="fas fa-phone-volume"></i></div>
+                        <h4>Call or WhatsApp</h4>
+                        <p class="text-muted mb-3">Direct contact with our specialist.</p>
+                        <a href="tel:+447482646491" class="text-decoration-none fw-bold fs-5" style="color:var(--primary-blue);">+44 7482 646491</a>
+                    </div>
+                </div>
+                <div class="col-md-5 reveal">
+                    <div class="p-4 contact-card h-100 text-center">
+                        <div class="contact-icon-circle"><i class="fas fa-envelope-open-text"></i></div>
+                        <h4>Email Us</h4>
+                        <p class="text-muted mb-3">Send your enquiry anytime.</p>
+                        <a href="mailto:info@fixproappliances.co.uk" class="text-decoration-none fw-bold fs-6" style="color:var(--primary-blue);">info@fixproappliances.co.uk</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/447482646491?text=Hello,%20I%20found%20your%20website%20and%20need%20appliance%20repair."
+       class="whatsapp-float" target="_blank" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-1">&copy; 2026 <strong>FIXPRO Appliances</strong>. All rights reserved.</p>
+            <p class="small  mb-0">Fixed Properly, First Time • London &amp; Surrounding Areas</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+    /* Scroll reveal — the only JS the page needs */
+    (function () {
+        const reveals = document.querySelectorAll('.reveal');
+        if (!('IntersectionObserver' in window)) {
+            reveals.forEach(el => el.classList.add('visible'));
+            return;
+        }
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        reveals.forEach(el => io.observe(el));
+    })();
+    </script>
+</body>
+</html>
